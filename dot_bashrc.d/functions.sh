@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+function gh() {
+  github "$@"
+}
+
 function github() {
   if [[ $1 == 'repos' ]]
   then
