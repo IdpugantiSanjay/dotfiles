@@ -53,17 +53,6 @@ function open() {
   esac
 }
 
-
-function backup-dotfiles() {
-  cp -ivr ~/.bashrc.d/* ~/dotfiles/bash/.bashrc.d/
-  cp ~/.config/starship.toml ~/dotfiles/starship/
-  cp ~/.ssh/config ~/dotfiles/ssh/
-  cp ~/.tmux.conf ~/dotfiles/tmux/.tmux.conf
-  cp ~/.bashrc ~/dotfiles/bash/
-  cp ~/.config/broot/verbs.hjson ~/dotfiles/broot/
-  cp -ivr ~/.config/kitty/* ~/dotfiles/kitty/
-}
-
 function mkcd() {
   if [[ ! -d "$@" ]]; then mkdir -p "$@"; fi
   cd "$@";
