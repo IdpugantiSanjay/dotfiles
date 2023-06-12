@@ -1,0 +1,6 @@
+alias cat="bat"
+alias cod="/home/sanjay/Work/RiderProjects/CourseDownloader/CourseDownloader.Cli/bin/Release/net6.0/CourseDownloader.Cli"
+alias rm="rip"
+alias lg="lazygit"
+alias ..="cd .."
+alias ...="cd ../.."
