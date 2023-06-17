@@ -1,31 +1,5 @@
 #!/usr/bin/env bash
 
-function gh() {
-  github "$@"
-}
-
-function github() {
-  if [[ $1 == 'repos' ]]
-  then
-    local view="${3:-code}"
-    firefox "https://github.com/IdpugantiSanjay/$2/$view"
-  elif [[ $1 == 'gists' ]]
-  then
-    gists=("ansible-dev-setup" "ansible-amz-linux")
-    case $2 in
-      "${gists[1]}")
-        firefox "https://gist.github.com/IdpugantiSanjay/174ae467ca930803c49b5497d6468e61"
-        ;;
-      "${gists[0]}")
-        firefox "https://gist.github.com/IdpugantiSanjay/5f2d3008013b6f0aaf8167566539d9e5"
-        ;;
-      *)
-        >&2 echo "Invalid gist please select any of: ${gists[@]}"
-        ;;
-      esac
-  fi
-}
-
 function youtube() {
   options=("subs" "watch-later")
   case $1 in
@@ -41,17 +15,6 @@ function youtube() {
     esac
 }
 
-function open() {
-  options=("todos")
-  case $1 in
-    "${options[0]}")
-      firefox "https://to-do.live.com/tasks/myday"
-      ;;
-    *)
-      >&2 echo "Invalid option. Please select any of: ${options[@]}"
-      ;;
-  esac
-}
 
 function mkcd() {
   if [[ ! -d "$@" ]]; then mkdir -p "$@"; fi
@@ -90,4 +53,88 @@ function trx() {
       >&2 echo "Invalid category. Please select any of: ${categories[@]}"
       ;;
     esac
+}
+
+
+gitir() {
+  local URLS_TEXT_FILE=$1
+  local COURSE_NAME=$2
+  local CATEGORY=$3
+  local DOWNLOAD_LOCATION
+
+  if [ -z "$URLS_TEXT_FILE" ]; then
+    echo "No URLS_TEXT_FILE provided. exiting"
+    return 0
+  fi
+
+  if [ -z "$COURSE_NAME" ]; then
+    echo "No COURSE_NAME provided. exiting"
+    return 0
+  fi
+
+  if [ -z "$CATEGORY" ]; then
+    echo "No CATEGORY provided. exiting"
+    return 0
+  fi
+
+  DOWNLOAD_LOCATION=$(__category_download_location "$CATEGORY")
+
+  # make sure the download path exists
+  ssh dexter "mkdir -p $DOWNLOAD_LOCATION"
+
+  # unmount if already mounted
+  umount "$HOME"/network-drives/
+
+  # mount the download path to client machine
+  sshfs dexter:"$DOWNLOAD_LOCATION" "$HOME"/network-drives/
+
+  mkdir -p "$DOWNLOAD_LOCATION"
+  wget --directory-prefix "$HOME"/network-drives/"$COURSE_NAME" --input-file "$URLS_TEXT_FILE"
+  
+  __rename_gitir_files "$HOME"/network-drives/"$COURSE_NAME"
+}
+
+
+__category_download_location() {
+  CATEGORY=$1
+  local FOLDER
+  case $CATEGORY in
+    frontend)
+      FOLDER='frontend'
+      ;;
+    non-technical)
+      FOLDER='non-technical'
+      ;;
+    dotnet)
+      FOLDER='dotnet'
+      ;;
+    linux)
+      FOLDER='linux'
+      ;;
+    azure)
+      FOLDER='azure'
+      ;;
+    security)
+      FOLDER='security'
+      ;;
+    *)
+      printf "No category found. Exiting"
+      exit
+  esac
+  echo "$HOME/Downloads/$FOLDER-courses"
+}
+
+__rename_gitir_files() {
+  local LOCATION
+  LOCATION=$1
+
+  if [ -z "$LOCATION" ]; then
+    echo "No location provided. exiting"
+    return 0
+  fi
+
+  fd git "$LOCATION/" | while read -r FILE; do
+    NEW_FILE="$(echo "${FILE}" | sd '\-git\.ir' '')";
+    mv -i "$FILE" "$NEW_FILE"
+  done
 }
