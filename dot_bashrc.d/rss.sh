@@ -1,5 +1,5 @@
 
-rss=~/Work/RiderProjects/Rss/Rss.Cli/bin/Debug/net7.0/Rss.Cli
+rss=~/Work/RiderProjects/Rss/Rss.Cli/bin/Debug/net7.0/Rss.Cli 
 
 rss() {
     local feed 
@@ -24,6 +24,10 @@ rss() {
 
 rss-pull() {
     gum spin --spinner minidot --title "Fetching Latest Items from feeds..." --show-output -- $rss pull
+}
+
+rss-add() {
+    $rss add "$1" --url "$2"
 }
 
 __rss_read_later() {
