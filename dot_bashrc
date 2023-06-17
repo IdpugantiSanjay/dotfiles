@@ -41,6 +41,9 @@ eval "$(zoxide init bash)"
 eval "$(starship init bash)"
 eval "$(direnv hook bash > /dev/null)"
 
+# shell options
+shopt -s autocd
+
 complete -C /usr/local/bin/bit bit
 
 # Generated for envman. Do not edit.
