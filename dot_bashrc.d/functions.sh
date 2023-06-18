@@ -1,29 +1,7 @@
 #!/usr/bin/env bash
-
-function youtube() {
-  options=("subs" "watch-later")
-  case $1 in
-    "${options[0]}")
-      firefox "https://www.youtube.com/feed/subscriptions"
-      ;;
-    "${options[1]}")
-      firefox "https://www.youtube.com/playlist?list=WL"
-      ;;
-    *)
-      >&2 echo "Invalid option. Please select any of: ${options[@]}"
-      ;;
-    esac
-}
-
-
 function mkcd() {
   if [[ ! -d "$@" ]]; then mkdir -p "$@"; fi
   cd "$@";
-}
-
-
-function google() {
- firefox "https://www.google.com/search?q=$1"
 }
 
 
