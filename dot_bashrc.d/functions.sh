@@ -138,3 +138,8 @@ __rename_gitir_files() {
     mv -i "$FILE" "$NEW_FILE"
   done
 }
+
+
+fkill() {
+  ps -ef | sed 1d | fzf -m | awk '{print $2}' | xargs kill
+}
