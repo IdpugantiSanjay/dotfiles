@@ -31,7 +31,10 @@ fi
 [ -f /usr/share/fzf/shell/key-bindings.bash ] && source /usr/share/fzf/shell/key-bindings.bash
 
 
-. "$HOME/.cargo/env"
+if [[ -f "$HOME/.cargo/env" ]]
+then
+	. "$HOME/.cargo/env"
+fi
 
 source ~/.config/broot/launcher/bash/br
 
