@@ -6,3 +6,7 @@ export HISTFILESIZE="${HISTSIZE}";
 export HISTCONTROL=ignorespace:erasedups
 
 shopt -s autocd
+shopt -s histappend
+
+export PROMPT_COMMAND="history -a; history -n"
+
