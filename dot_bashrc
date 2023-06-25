@@ -49,3 +49,5 @@ complete -C /usr/local/bin/bit bit
 
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+
+bind -x '"\t": fzf_bash_completion'
