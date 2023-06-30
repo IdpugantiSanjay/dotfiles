@@ -51,3 +51,8 @@ complete -C /usr/local/bin/bit bit
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 
 bind -x '"\t": fzf_bash_completion'
+
+if [[ -d /home/linuxbrew/.linuxbrew/bin ]]
+then
+	PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
+fi
