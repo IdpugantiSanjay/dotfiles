@@ -126,5 +126,5 @@ fkill() {
 
 timer() {
   notification="Timer completed"
-  tclock timer -d "$1" -e notify-send "$notification"
+  tclock timer -d "$1" -e notify-send "$notification -h string:sound-name:message"
 }
