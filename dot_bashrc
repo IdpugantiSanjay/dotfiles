@@ -61,3 +61,5 @@ fi
 function update() {
 	sudo dnf update -y
 }
+
+complete -F _open_completions open
