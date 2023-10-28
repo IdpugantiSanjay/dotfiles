@@ -8,3 +8,20 @@ git branch --show-current
 
 # Connect to dexter
 ssh dexter
+
+% sshfs
+# Connect dexter's folder
+sshfs sanjay@192.168.29.157:$HOME/<folder> $HOME/network-drives/
+
+$ folder: echo "Documents Videos Downloads" | tr ' ' '\n'
+
+# Disconnect dexter's folder
+umount $HOME/network-drives/
+
+% docker
+
+# Docker clean
+docker system prune --volumes --all
+
+# Docker clean along with unused images
+docker system prune --volumes

@@ -43,7 +43,7 @@ source ~/.config/broot/launcher/bash/br
 eval "$(zoxide init bash)"
 eval "$(starship init bash)"
 eval "$(direnv hook bash > /dev/null)"
-
+eval "$(navi widget bash)"
 
 complete -C /usr/local/bin/bit bit
 
