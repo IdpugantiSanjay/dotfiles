@@ -1,0 +1,4 @@
+% ssh
+
+# Connect to dexter
+ssh dexter

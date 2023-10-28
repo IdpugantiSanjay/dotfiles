@@ -1,0 +1,10 @@
+% git
+
+# Current branch
+git branch --show-current
+
+
+% ssh
+
+# Connect to dexter
+ssh dexter
