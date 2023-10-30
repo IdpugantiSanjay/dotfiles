@@ -11,7 +11,7 @@ ssh dexter
 
 % sshfs
 # Connect dexter's folder
-sshfs sanjay@192.168.29.157:$HOME/<folder> $HOME/network-drives/
+sshfs -o follow_symlinks sanjay@192.168.29.157:$HOME/<folder> $HOME/network-drives/
 
 $ folder: echo "Documents Videos Downloads" | tr ' ' '\n'
 
@@ -25,3 +25,18 @@ docker system prune --volumes --all
 
 # Docker clean along with unused images
 docker system prune --volumes
+
+
+% rsync
+
+# sync files between folders
+rsync -rP source destination
+
+# sync files between folder over the network
+rsync -rzP source destination
+
+
+
+% cd
+# move to network drive
+cd ~/network-drives
