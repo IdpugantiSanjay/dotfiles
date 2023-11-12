@@ -40,3 +40,8 @@ rsync -rzP source destination
 % cd
 # move to network drive
 cd ~/network-drives
+
+
+% reboot
+# reboot
+shutdown -r now
