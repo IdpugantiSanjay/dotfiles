@@ -6,7 +6,7 @@ fi
 # User specific environment
 if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]
 then
-    PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+    PATH="$HOME/.local/bin:$HOME/bin:$HOME/.dotnet:$PATH"
 fi
 export PATH
 
@@ -37,8 +37,7 @@ then
 fi
 
 source ~/.config/broot/launcher/bash/br
-
-
+source /usr/share/autojump/autojump.bash
 
 eval "$(zoxide init bash)"
 eval "$(starship init bash)"
