@@ -41,7 +41,7 @@ source /usr/share/autojump/autojump.bash
 
 eval "$(zoxide init bash)"
 eval "$(starship init bash)"
-eval "$(direnv hook bash > /dev/null)"
+eval "$(direnv hook bash)"
 eval "$(navi widget bash)"
 
 complete -C /usr/local/bin/bit bit
