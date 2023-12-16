@@ -128,3 +128,7 @@ timer() {
   notification="Timer completed"
   tclock timer -d "$1" -e notify-send "$notification -h string:sound-name:message"
 }
+
+tailscale-up() {
+  sudo systemctl start tailscaled &&  sudo tailscale up --ssh
+}
