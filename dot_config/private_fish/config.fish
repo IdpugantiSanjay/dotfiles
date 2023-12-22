@@ -11,4 +11,5 @@ end
 
 zoxide init fish | source
 starship init fish | source
-
+direnv hook fish | source
+navi widget fish | source
