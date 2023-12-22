@@ -6,6 +6,5 @@ alias ...="cd ../.."
 alias ccd="chezmoi cd"
 alias cp="cp -i"
 
-alias sa="s -p amazon"
 alias sy="s -p youtube"
 alias sw="s -p wikipedia"
