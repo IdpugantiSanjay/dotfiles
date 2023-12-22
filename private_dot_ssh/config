@@ -1,3 +1,4 @@
 Host dexter
   HostName 192.168.29.157
   User sanjay
+  IdentityFile ~/.ssh/id_ed25519_sk
