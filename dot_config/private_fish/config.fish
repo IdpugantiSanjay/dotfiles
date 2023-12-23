@@ -14,6 +14,6 @@ navi widget fish | source
 
 
 if status is-interactive
-and not set -q TMUX
-    tmux
+# and not set -q TMUX
+#     tmux
 end
