@@ -1,0 +1,11 @@
+{
+	"A hono route handler": {
+		"prefix": "hh",
+		"body": [
+			".${1:get}(${2:$TM_SELECTED_TEXT}, async (c) => {",
+			"  ${3:return c.json(200)}",
+			"})"
+		],
+		"description": "A hono route handler"
+	}
+}
