@@ -7,8 +7,7 @@ function backup -d 'backup script using rsync' -a source_dir destination_dir
 	end
 	
 	if not test -d $destination_dir
-		echo "$destination_dir does not exist or is not a directory"
-		return
+		mkdir -p $destination_dir
 	end
 
 	set timestamp (date "+%Y-%m-%d")
