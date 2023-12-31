@@ -1,3 +1,7 @@
 function unmount
-	sudo umount $HOME/network-drives/
+	if mountpoint $HOME/network-drives > /dev/null
+		sudo umount $HOME/network-drives/
+	else
+		echo 'Nothing mounted on $HOME/network-drives'
+	end
 end
