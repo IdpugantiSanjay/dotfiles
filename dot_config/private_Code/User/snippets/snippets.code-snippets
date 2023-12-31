@@ -7,5 +7,34 @@
 			"})"
 		],
 		"description": "A hono route handler"
+	},
+	"zod infer": {
+		"prefix": "zi",
+		"body": [
+			"export type ${1:$TM_SELECTED_TEXT} = z.infer<typeof ${1:$TM_SELECTED_TEXT}>"
+		],
+		"description": "zod infer"
+	},
+	"safeParse3": {
+		"prefix": "sp2",
+		"body": [
+			"const parseResult = safeParse2($1, $2)",
+			"if (parseResult.success) {",
+			"  const [$3, $4] = parseResult.data",
+			"}",
+			"return badRequest(c, parseResult.errors)"
+		],
+		"description": "safeParse3"
+	},
+	"safeParse3": {
+		"prefix": "sp3",
+		"body": [
+			"const parseResult = safeParse3($1, $2, $3)",
+			"if (parseResult.success) {",
+			"  const [$4, $5, $6] = parseResult.data",
+			"}",
+			"return badRequest(c, parseResult.errors)"
+		],
+		"description": "safeParse3"
 	}
 }
