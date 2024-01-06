@@ -36,5 +36,66 @@
 			"return badRequest(c, parseResult.errors)"
 		],
 		"description": "safeParse3"
+	},
+	"Parse hono request body ": {
+		"prefix": "hb",
+		"body": [
+			"const body = await c.req.json()"
+		],
+		"description": "Parse hono request body "
+	},
+	"export async function1": {
+		"prefix": "eaf1",
+		"body": [
+			"export async function ${1:functionName}(${2:param}:${3:type}): Promise<${4:returnType}> {",
+			"  $5",
+			"}"
+		],
+		"description": "export async function with 1 parameter"
+	},
+	"export async function2": {
+		"prefix": "eaf2",
+		"body": [
+			"export async function ${1:functionName}(${2:param}:${3:type}, ${4:param}:${5:type}): Promise<${6:returnType}> {",
+			"  $7",
+			"}"
+		],
+		"description": "export async function with 2 parameters"
+	},
+	"export async function3": {
+		"prefix": "eaf3",
+		"body": [
+			"export async function ${1:functionName}(${2:param}:${3:type}, ${4:param}:${5:type}, ${6:param}:${7:type}): Promise<${8:returnType}> {",
+			"  $9",
+			"}"
+		],
+		"description": "export async function3"
+	},
+	"export function1": {
+		"prefix": "ef1",
+		"body": [
+			"export function ${1:functionName}(${2:param}:${3:type}): ${4:returnType} {",
+			"  $5",
+			"}"
+		],
+		"description": "export function with 1 parameter"
+	},
+	"export function2": {
+		"prefix": "ef2",
+		"body": [
+			"export function ${1:functionName}(${2:param}:${3:type}, ${4:param}:${5:type}): ${6:returnType} {",
+			"  $7",
+			"}"
+		],
+		"description": "export function with 2 parameters"
+	},
+	"export function3": {
+		"prefix": "ef3",
+		"body": [
+			"export function ${1:functionName}(${2:param}:${3:type}, ${4:param}:${5:type}, ${6:param}:${7:type}): ${8:returnType} {",
+			"  $9",
+			"}"
+		],
+		"description": "export async function3"
 	}
 }
