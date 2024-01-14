@@ -15,8 +15,9 @@ function ch-rename -a toc
 		set lesson (string replace '^' "" $lesson)
 		set lesson (string replace '.' "" $lesson)
 		
-		echo "lesson$lesson_number -> $lesson.mp4"
-		mv "./lesson$lesson_number.mp4" "$lesson.mp4"
+		set -l new_name (string pad -w 3 --char '0' $lesson_number).$lesson.mp4
+		echo "lesson$lesson_number -> $new_name"
+		mv "./lesson$lesson_number.mp4" "$new_name.mp4"
 		set lesson_number (math $lesson_number + 1)
 	end
 end
