@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=pueue
+Comment=Run pueue tasks
+Exec=/home/sanjay/Work/pueue.fish
+Type=Application
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
