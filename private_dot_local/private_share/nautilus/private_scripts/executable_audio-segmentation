@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+
+
+IFS_BAK=$IFS
+IFS="
+"
+
+notify-send "Started audio processing"
+
+for file in $NAUTILUS_SCRIPT_SELECTED_FILE_PATHS; do
+	set -e
+	ffprobe -v error -of json -show_chapters "$file" | 
+	jq -r '.chapters[] | "\"\(.tags.title)\"~~\(.start_time)~~\(.end_time)"' | 
+	awk -F'~~' -v input_file="$file" '{ system("ffmpeg -i \"" input_file "\" -ss "$2" -to "$3" -c copy "$1".mp3 ") }' 2>> .error
+done
+notify-send "Audio Processing Completed"
+
+
+
+IFS=$IFS_BAK
