@@ -45,3 +45,21 @@ cd ~/network-drives
 % reboot
 # reboot
 shutdown -r now
+
+% dnf
+# dnf list repositories
+dnf repolist
+
+# dnf disable repo
+sudo dnf config-manager --set-disabled <repo>
+
+$ repo: dnf repolist | awk '{print $1}'
+
+ 
+% ffmpeg
+
+# extract audio file into chapters
+ffprobe -v error -of json -show_chapters "$file" | 
+	jq -r '.chapters[] | "\"\(.tags.title)\"~~\(.start_time)~~\(.end_time)"' | 
+	awk -F'~~' -v input_file="$file" '{ system("ffmpeg -i \"" input_file "\" -ss "$2" -to "$3" -c copy "$1".mp3 ") }' 2>> .error
+
