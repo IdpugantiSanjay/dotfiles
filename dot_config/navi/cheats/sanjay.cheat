@@ -63,3 +63,8 @@ ffprobe -v error -of json -show_chapters "$file" |
 	jq -r '.chapters[] | "\"\(.tags.title)\"~~\(.start_time)~~\(.end_time)"' | 
 	awk -F'~~' -v input_file="$file" '{ system("ffmpeg -i \"" input_file "\" -ss "$2" -to "$3" -c copy "$1".mp3 ") }' 2>> .error
 
+
+% openssl
+
+# generate 16 character random password
+openssl rand -base64 16
