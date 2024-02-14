@@ -4,6 +4,7 @@ IFS="
 
 for file in $NAUTILUS_SCRIPT_SELECTED_FILE_PATHS; do
 	result=$(/home/sanjay/Work/RiderProjects/IndexCourse/IndexCourse.Cli/bin/Release/net7.0/IndexCourse.Cli "$file" 2>> ~/.index-course-nautilus-log)
+	echo $result | xh http://192.168.29.157:5010/api/v1/users/1/courses 2>> .index-course-POST-error-log
 	notify-send "$result"
 done
 
