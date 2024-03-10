@@ -19,7 +19,11 @@ if status is-interactive
   direnv hook fish | source
   navi widget fish | source
 
-
+  abbr --add d dexter
+  abbr --add u update
+  abbr --add --position anywhere lsf '(ls | fzf -m)'
+  abbr --add rlsf 'rm (ls | fzf -m)'
+  abbr --add s 'source ~/.config/fish/config.fish'
   # abbr --add lsf "ls | fzf"
   # abbr --add coc convco commit
   # abbr --add j just
