@@ -13,6 +13,7 @@ if status is-interactive
 #     tmux
   set -x EDITOR hx
   set -x BROWSER firefox
+  # set -U fish_features qmark-noglob
   # set -x BARTIB_FILE "/home/sanjay/Documents/activities.bartib"
   zoxide init fish | source
   starship init fish | source
@@ -24,6 +25,8 @@ if status is-interactive
   abbr --add --position anywhere lsf '(ls | fzf -m)'
   abbr --add rlsf 'rm (ls | fzf -m)'
   abbr --add s 'source ~/.config/fish/config.fish'
+  abbr --add t tmux
+
   # abbr --add lsf "ls | fzf"
   # abbr --add coc convco commit
   # abbr --add j just
