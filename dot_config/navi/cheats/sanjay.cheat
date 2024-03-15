@@ -68,3 +68,9 @@ ffprobe -v error -of json -show_chapters "$file" |
 
 # generate 16 character random password
 openssl rand -base64 16
+
+
+% xsv
+
+# convert to json
+xsv select "Narration","Value Dat","Debit Amount" ~/Documents/Transactions/<>  | xsv search -s Narration '' | xsv cat rows | tail -2 | awk -F ',' '{printf("{\"description\": \"%s\", \"date\": \"%s\", \"amount\": %d }", $1, $2, $3)}' | jq -c
