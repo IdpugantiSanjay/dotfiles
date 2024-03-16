@@ -74,3 +74,11 @@ openssl rand -base64 16
 
 # convert to json
 xsv select "Narration","Value Dat","Debit Amount" ~/Documents/Transactions/<>  | xsv search -s Narration '' | xsv cat rows | tail -2 | awk -F ',' '{printf("{\"description\": \"%s\", \"date\": \"%s\", \"amount\": %d }", $1, $2, $3)}' | jq -c
+
+
+% age
+
+# encrypt a file
+age -r $age_public_key -o "<file>.age" "<file>"
+
+$ file: (ls | fzf)

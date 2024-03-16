@@ -1,5 +1,5 @@
 
-
+set -Ux age_public_key "age10fgs4eq2pcvqvfdr9uzm3tqjnc6ppgmcfv9znek0rtu9xgpwr95smg5a0u"
 
 for file in /home/sanjay/.config/fish/conf.d/*
     if test -f $file
@@ -19,6 +19,7 @@ if status is-interactive
   starship init fish | source
   direnv hook fish | source
   navi widget fish | source
+  fzf --fish | source
 
   abbr --add d dexter
   abbr --add u update
@@ -26,7 +27,7 @@ if status is-interactive
   abbr --add rlsf 'rm (ls | fzf -m)'
   abbr --add s 'source ~/.config/fish/config.fish'
   abbr --add t tmux
-
+  abbr --add gpt 'firefox chat.openai.com'
   # abbr --add lsf "ls | fzf"
   # abbr --add coc convco commit
   # abbr --add j just
