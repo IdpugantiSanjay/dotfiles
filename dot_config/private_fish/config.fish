@@ -27,7 +27,8 @@ if status is-interactive
   abbr --add rlsf 'rm (ls | fzf -m)'
   abbr --add s 'source ~/.config/fish/config.fish'
   abbr --add t tmux
-  abbr --add gpt 'firefox chat.openai.com'
+  abbr --add gpt "pueue add 'firefox chat.openai.com & disown'"
+  abbr --add bard "pueue add 'firefox gemini.google.com & disown'"
   # abbr --add lsf "ls | fzf"
   # abbr --add coc convco commit
   # abbr --add j just
@@ -47,6 +48,10 @@ if status is-interactive
 
   function fish_user_key_bindings
     bind \cl 'clear; commandline -f repaint'
+  end
+    
+  if not set -q TMUX
+    exec tmux
   end
 end
 
