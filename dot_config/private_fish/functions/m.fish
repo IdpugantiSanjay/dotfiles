@@ -1,14 +1,13 @@
 function m
-	# cp "/home/sanjay/.mozilla/firefox/2spjj0ef.default-release/places.sqlite" "/home/sanjay/Documents/places.sqlite"
-	set -l db_path "/home/sanjay/Documents/places.sqlite"
-	set -l selected (sqlite3 $db_path "select distinct title from moz_bookmarks where title is NOT NULL AND title <> ''  order by title" | gum filter)
-
-	if not test -z $selected
-		set -l url (sqlite3 $db_path "
-			select url from moz_bookmarks MB
-			inner join moz_places MP ON MP.id = MB.fk
-			where MB.title LIKE '%$selected%'
-		")
-		firefox -new-tab $url > /dev/null & disown
-	end
+	cat ~/.config/fish/functions/most_visited.sql | 
+	sqlite3 -separator '=%=' ~/.mozilla/firefox/8jhgpwq0.default-release/places.sqlite |
+	awk -F '=%=' '{printf "%s\t%s\n", $1,  $2}' | 
+	fzf --delimiter '\t' --with-nth 1 --preview 'echo {2}' --bind "enter:become(pueue add '$BROWSER {2} & disown')"
 end
+
+
+# requirements:
+# 1. fzf (dnf)
+# 2. sqlite3 (builtin)
+# 3. pueue (manual)
+# 4. firefox (builtin)
