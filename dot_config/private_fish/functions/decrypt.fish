@@ -1,3 +1,7 @@
 function decrypt -d "decrypt a file encrypted with age" -a encrypted
-    cat $encrypted | age -d -i "/home/sanjay/Documents/age-yubikey-identity-97ef0b73.txt" > (echo "$encrypted" | sd ".age" "")
+    set -l ends_with_age (echo "$encrypted" | grep '\.age$')
+    if test -z $ends_with_age
+        echo 'Can only decrypt files ending with .age' and return 0
+    end
+    cat $encrypted | age -d -i ~/.config/age/keys.txt > (echo "$encrypted" | sd '.age$' '')
 end

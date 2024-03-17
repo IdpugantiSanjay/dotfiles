@@ -1,3 +1,5 @@
+status is-interactive; or exit 0
+
 function m
 	cat ~/.config/fish/functions/most_visited.sql | 
 	sqlite3 -separator '=%=' ~/.mozilla/firefox/8jhgpwq0.default-release/places.sqlite |
