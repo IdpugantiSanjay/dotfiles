@@ -11,7 +11,7 @@ ssh dexter
 
 % sshfs
 # Connect dexter's folder
-sshfs -o follow_symlinks sanjay@192.168.29.157:$HOME/<folder> $HOME/network-drives/
+sshfs -o follow_symlinks sanjay@192.168.29.157:$HOME/<folder> /mnt/dexter
 
 $ folder: echo "Documents Videos Downloads" | tr ' ' '\n'
 
@@ -81,4 +81,7 @@ xsv select "Narration","Value Dat","Debit Amount" ~/Documents/Transactions/<>  |
 # encrypt a file
 age -r $age_public_key -o "<file>.age" "<file>"
 
-$ file: (ls | fzf)
+$ file: (ls -p | grep -v / | fzf)
+
+# copy age private key
+cat ~/.config/age/keys.txt | cb
