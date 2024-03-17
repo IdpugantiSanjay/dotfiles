@@ -51,7 +51,7 @@ if status is-interactive
   end
     
   if not set -q TMUX
-    exec tmux
+    exec tmux 2> /dev/null
   end
 end
 
