@@ -4,7 +4,7 @@ function gh -a navigation
 
 
     if contains $navigation $repo_navigations || test -z $navigation
-        set repo (command gh repo list --json 'name' -q '.[].name' | fzf)
+        set repo (command gh repo list --json 'name' -q '.[].name' | fzf --exact)
         if not test -z $repo
             set url "https://github.com/$github_username/$repo/$navigation"
             pueue add "$BROWSER $url & disown"
