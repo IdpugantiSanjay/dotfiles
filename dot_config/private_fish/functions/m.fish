@@ -2,7 +2,7 @@ status is-interactive; or exit 0
 
 function m
 	set -l output "/tmp/$(random)"
-	set -l query_result = (cat ~/.config/fish/functions/most_visited.sql | 
+	set -l query_result = (cat ~/.config/fish/functions/bookmarks.sql | 
 	sqlite3 -separator '=%=' ~/.mozilla/firefox/8jhgpwq0.default-release/places.sqlite > $output 2> /dev/null)
 	
 	# firefox sometimes locks the places.sqlite database with the following error:
@@ -10,7 +10,7 @@ function m
 	if test "$status" -eq 1
 		# copy places.sqlite to a temp location and query on that file
 		command cp ~/.mozilla/firefox/8jhgpwq0.default-release/places.sqlite /tmp/places.sqlite
-		set -l query_result = (cat ~/.config/fish/functions/most_visited.sql | sqlite3 -separator '=%=' /tmp/places.sqlite > $output)
+		set -l query_result = (cat ~/.config/fish/functions/bookmarks.sql | sqlite3 -separator '=%=' /tmp/places.sqlite > $output)
 	end
 
 	cat $output |
