@@ -25,3 +25,6 @@ format = "via [🤖 $version](bold green) "
 
 [dotnet]
 disabled = false
+
+[direnv]
+disabled = false
