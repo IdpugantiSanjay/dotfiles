@@ -51,7 +51,7 @@ if status is-interactive
     bind \cl 'clear; commandline -f repaint'
   end
     
-  if not set -q TMUX && [ hostname != 'prime' ]
+  if not set -q TMUX && [ hostname == 'prime' ]
     exec tmux 2> /dev/null
   end
 end
