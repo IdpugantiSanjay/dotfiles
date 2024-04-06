@@ -1,5 +1,6 @@
 
 set -Ux age_public_key "age10fgs4eq2pcvqvfdr9uzm3tqjnc6ppgmcfv9znek0rtu9xgpwr95smg5a0u"
+set -Ux github_username "IdpugantiSanjay"
 
 for file in /home/sanjay/.config/fish/conf.d/*
     if test -f $file
@@ -25,7 +26,7 @@ if status is-interactive
   abbr --add u update
   abbr --add --position anywhere lsf '(ls | fzf -m)'
   abbr --add rlsf 'rm (ls | fzf -m)'
-  abbr --add s 'source ~/.config/fish/config.fish'
+  abbr --add src 'source ~/.config/fish/config.fish'
   abbr --add t tmux
   abbr --add gpt "pueue add 'firefox chat.openai.com & disown'"
   abbr --add bard "pueue add 'firefox gemini.google.com & disown'"
@@ -50,7 +51,7 @@ if status is-interactive
     bind \cl 'clear; commandline -f repaint'
   end
     
-  if not set -q TMUX
+  if not set -q TMUX && [ hostname != 'prime' ]
     exec tmux 2> /dev/null
   end
 end
