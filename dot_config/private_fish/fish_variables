@@ -1,5 +1,6 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR --export DEXTER_MAC_ADDRESS:74\x3a56\x3a3c\x3a85\x3ac0\x3ae2
 SETUVAR __fish_initialized:3400
 SETUVAR --export age_public_key:age10fgs4eq2pcvqvfdr9uzm3tqjnc6ppgmcfv9znek0rtu9xgpwr95smg5a0u
 SETUVAR fish_color_autosuggestion:555\x1ebrblack

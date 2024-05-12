@@ -22,6 +22,8 @@ function gh -a navigation
         set url "https://gist.github.com/$github_username"
     case home
         set url "https://github.com"
+    case trending
+        set url "https://github.com/trending"
     case '*'
         echo "Error: $argv[1] is not a valid navigation" >&2
         return 1
