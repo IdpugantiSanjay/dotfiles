@@ -4,6 +4,11 @@ customProviders [
 		name: gpt4o
 		url: "https://chat.openai.com/?model=gpt-4o&q=%s"
 		tags: [openai]
+	},
+	{
+		name: bing
+		url: "https://www.bing.com/search?showconv=1&sendquery=1&q=%s"
+		tags: [bing]
 	}
 ]
 
