@@ -1,2 +1,9 @@
 provider: google
+customProviders [
+	{
+		name: gpt4o
+		url: "https://chat.openai.com/?model=gpt-4o&q=%s"
+		tags: [openai]
+	}
+]
 
