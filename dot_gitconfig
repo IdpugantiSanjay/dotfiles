@@ -1,0 +1,18 @@
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+	
+[includeIf "gitdir:~/work/github/"]
+    path = ~/.gitconfig-gh
+	
+[includeIf "gitdir:~/work/gitlab/"]
+    path = ~/.gitconfig-gl
+
+[includeIf "gitdir:~/.local/share/chezmoi/"]
+    path = ~/.gitconfig-gh
+
+[pull]
+	rebase = true
