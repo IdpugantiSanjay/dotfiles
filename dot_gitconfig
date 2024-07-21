@@ -18,4 +18,4 @@
 	rebase = true
 
 [push]
-	autoSetupRemote = always
+	autoSetupRemote = true
