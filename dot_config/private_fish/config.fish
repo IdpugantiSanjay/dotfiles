@@ -31,6 +31,7 @@ if status is-interactive
     abbr --add t tmux
     abbr --add g git
     abbr --add bard "pueue add 'firefox gemini.google.com & disown'"
+    abbr --add coc 'convco commit'
     # abbr --add lsf "ls | fzf"
     # abbr --add coc convco commit
     # abbr --add j just
