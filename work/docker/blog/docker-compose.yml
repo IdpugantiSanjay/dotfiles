@@ -1,0 +1,6 @@
+services:
+  blog:
+    restart: always
+    image: "isanjay112/blog"
+    ports:
+      - 8088:80

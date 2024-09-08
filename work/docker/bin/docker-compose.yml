@@ -1,0 +1,8 @@
+services:
+  bin:
+    restart: unless-stopped
+    image: isanjay112/bin
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./bin_data:/data
