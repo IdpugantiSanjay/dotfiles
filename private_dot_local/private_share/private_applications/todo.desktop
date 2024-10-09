@@ -1,0 +1,25 @@
+[Desktop Entry]
+Version=1.0
+Name=Microsoft To Do
+Comment=Todo lists
+Exec=firefox https://to-do.live.com
+Terminal=false
+Type=Application
+Icon=/home/sanjay/.local/share/application-icons/Microsoft_To-Do_icon.png
+Categories=GTK;
+StartupNotify=false
+Actions=my-day;important;planned;
+Keywords=todo;microsoft;
+
+
+[Desktop Action my-day]
+Name=My Day
+Exec=firefox https://to-do.live.com/tasks/myday
+
+[Desktop Action important]
+Name=Important
+Exec=firefox https://to-do.live.com/tasks/important
+
+[Desktop Action planned]
+Name=Planned
+Exec=https://to-do.live.com/tasks/planned

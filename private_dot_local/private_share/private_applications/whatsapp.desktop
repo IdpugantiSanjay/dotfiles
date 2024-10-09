@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Name=Whatsapp
+Comment=whatsapp
+Exec=firefox https://web.whatsapp.com/
+Terminal=false
+Type=Application
+Icon=/home/sanjay/.local/share/application-icons/WhatsApp.png
+Categories=GTK;
+StartupNotify=false

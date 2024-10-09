@@ -1,0 +1,32 @@
+[Desktop Entry]
+Version=1.0
+Name=Google Calendar
+Comment=Calendar
+Exec=firefox https://calendar.google.com
+Terminal=false
+Type=Application
+Icon=/home/sanjay/.local/share/application-icons/Google_Calendar_icon.png
+Categories=GTK;
+StartupNotify=false
+Actions=agenda;week-view;month-view;year-view;customday;
+Keywords=google;calendar;
+
+[Desktop Action agenda]
+Name=Agenda
+Exec=firefox https://calendar.google.com/calendar/u/0/r/agenda
+
+[Desktop Action week-view]
+Name=Week View
+Exec=firefox https://calendar.google.com/calendar/u/0/r/week
+
+[Desktop Action month-view]
+Name=Month View
+Exec=firefox https://calendar.google.com/calendar/u/0/r/month
+
+[Desktop Action year-view]
+Name=Year View
+Exec=firefox https://calendar.google.com/calendar/u/0/r/year
+
+[Desktop Action customday]
+Name=CustomDay
+Exec=firefox https://calendar.google.com/calendar/u/0/r/customday
