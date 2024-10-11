@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Claude AI
+Comment=Open Claude AI in your default web browser
+Exec=xdg-open https://claude.ai
+Terminal=false
+Keywords=ai
+Categories=ai;
+Icon=/home/sanjay/.local/share/application-icons/claude-ai.svg

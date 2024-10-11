@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Name=Activity
+Comment=System activity from btop
+Exec=kitty  --override initial_window_width=1600 --override initial_window_height=1200 --class=Activity --title=Activity -e btop
+Terminal=false
+Type=Application
+Icon=/home/$USER/.local/share/application-icons/btop-logo.png
+Categories=GTK;
+StartupNotify=false

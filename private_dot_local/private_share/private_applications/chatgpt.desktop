@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=ChatGPT
+Comment=Open ChatGPT in your default web browser
+Exec=xdg-open https://chat.openai.com/
+Terminal=false
+Keywords=openai;gpt;
+Categories=ai;
+Icon=/home/sanjay/.local/share/application-icons/chatgpt.svg

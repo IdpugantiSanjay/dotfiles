@@ -2,7 +2,7 @@
 Version=1.0
 Name=Fastmail
 Comment=mail
-Exec=firefox https://app.fastmail.com/mail/Inbox
+Exec=xdg-open https://app.fastmail.com/mail/Inbox
 Terminal=false
 Type=Application
 Icon=/home/sanjay/.local/share/application-icons/FM-Icon-RGB.png
@@ -13,4 +13,4 @@ Keywords=mail;
 
 [Desktop Action compose]
 Name=Compose
-Exec=firefox https://app.fastmail.com/mail/Drafts/compose?u=b601406a
+Exec=xdg-open https://app.fastmail.com/mail/Drafts/compose?u=b601406a
