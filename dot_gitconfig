@@ -14,13 +14,8 @@
 [includeIf "gitdir:~/.local/share/chezmoi/"]
     path = ~/.gitconfig-gh
 
-[pull]
-	rebase = true
-
 [push]
 	autoSetupRemote = true
-
-
 
 [diff]
         tool = difftastic
