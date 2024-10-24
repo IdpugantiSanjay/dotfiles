@@ -1,0 +1,24 @@
+[Desktop Entry]
+Version=1.0
+Name=amazon.in
+Comment=Amazon Shopping
+Exec=xdg-open https://www.amazon.in
+Terminal=false
+Type=Application
+Icon=/home/sanjay/.local/share/application-icons/amazon.svg
+Categories=GTK;
+StartupNotify=false
+Actions=orders;amazon-pay;cart;
+Keywords=shopping;amazon;orders;amazon-pay;cart;
+
+[Desktop Action orders]
+Name=Your Orders
+Exec=xdg-open https://www.amazon.in/gp/your-account/order-history
+
+[Desktop Action amazon-pay]
+Name=Your Orders
+Exec=xdg-open https://www.amazon.in/amazonpay/home
+
+[Desktop Action cart]
+Name=Your Cart
+Exec=xdg-open https://www.amazon.in/gp/cart/view.html

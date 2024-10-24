@@ -1,0 +1,26 @@
+[Desktop Entry]
+Version=1.0
+Name=TickTick
+Comment=Task Management App
+Exec=xdg-open https://ticktick.com/webapp#q/today/tasks
+Icon=/home/sanjay/.local/share/application-icons/ticktick.svg
+Terminal=false
+Type=Application
+Categories=Office;Productivity;
+Actions=all;next-7-days;inbox;summary
+
+[Desktop Action all]
+Name=All
+Exec=xdg-open https://ticktick.com/webapp#q/all/tasks
+
+[Desktop Action next-7-days]
+Name=Next 7 Days
+Exec=xdg-open https://ticktick.com/webapp#q/week/tasks
+
+[Desktop Action inbox]
+Name=Inbox
+Exec=xdg-open https://ticktick.com/webapp#p/inbox/tasks
+
+[Desktop Action summary]
+Name=Summary
+Exec=xdg-open https://ticktick.com/webapp#q/all/summary
