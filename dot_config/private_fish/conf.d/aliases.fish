@@ -20,3 +20,8 @@ alias bing "s -p bing"
 alias pi="ssh pi"
 alias claude="s -p claude"
 alias open="xdg-open &> /dev/null"
+alias vcat="command cat"
+
+
+alias ...='cd ../..'
+alias ....='cd ../../..'
