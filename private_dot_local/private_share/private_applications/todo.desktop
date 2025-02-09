@@ -2,24 +2,19 @@
 Version=1.0
 Name=Microsoft To Do
 Comment=Todo lists
-Exec=xdg-open https://to-do.live.com
+Exec=microsoft-edge https://to-do.live.com/tasks/myday
 Terminal=false
 Type=Application
 Icon=/home/sanjay/.local/share/application-icons/Microsoft_To-Do_icon.png
 Categories=GTK;
 StartupNotify=false
-Actions=my-day;important;planned;
+Actions=important;planned;
 Keywords=todo;microsoft;
-
-
-[Desktop Action my-day]
-Name=My Day
-Exec=xdg-open https://to-do.live.com/tasks/myday
 
 [Desktop Action important]
 Name=Important
-Exec=xdg-open https://to-do.live.com/tasks/important
+Exec=microsoft-edge https://to-do.live.com/tasks/important
 
 [Desktop Action planned]
 Name=Planned
-Exec=https://to-do.live.com/tasks/planned
+Exec=microsoft-edge https://to-do.live.com/tasks/planned
