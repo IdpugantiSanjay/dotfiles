@@ -1,0 +1,4 @@
+[[cable_channel]]
+name = "rss-logs"
+source_command = 'ls /var/log/rss-api/ | sort --reverse | head -n 1 | xargs -I _ tac /var/log/rss-api/_'
+preview_command = 'echo {} | jq . | bat --color=always --style=plain --language=json'
