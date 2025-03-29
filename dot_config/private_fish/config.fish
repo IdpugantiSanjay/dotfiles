@@ -21,7 +21,6 @@ if status is-interactive
     direnv hook fish | source
     navi widget fish | source
     fzf --fish | source
-    /home/linuxbrew/.linuxbrew/bin/mise activate fish | source
 
     abbr --add d dexter
     abbr --add u update
@@ -30,8 +29,10 @@ if status is-interactive
     abbr --add src 'source ~/.config/fish/config.fish'
     abbr --add t tmux
     abbr --add g git
-    abbr --add bard "pueue add 'firefox gemini.google.com & disown'"
+    abbr --add gemini "xdg-open https://gemini.google.com"
     abbr --add coc 'convco commit'
+    abbr --add allow 'direnv allow .'
+    # abbr --add ls 'ls --hyperlink'
     # abbr --add lsf "ls | fzf"
     # abbr --add coc convco commit
     # abbr --add j just
@@ -53,7 +54,26 @@ if status is-interactive
         bind \cl 'clear; commandline -f repaint'
     end
 
-    if not set -q TMUX && [ $hostname = prime ]
-        exec tmux 2>/dev/null
+    # command cat ~/.pending-tasks
+    # if not set -q TMUX && [ $hostname = prime ]
+    #     exec tmux 2>/dev/null
+    # end
+end
+
+# pnpm
+set -gx PNPM_HOME "/home/sanjay/.local/share/pnpm"
+if not string match -q -- $PNPM_HOME $PATH
+    set -gx PATH "$PNPM_HOME" $PATH
+end
+# pnpm end
+
+
+function __auto_source --on-variable PWD
+    set -l current_dir (pwd)
+    set -l fish_env_file "$current_dir/.local.fish"
+    
+    if test -f $fish_env_file
+        source $fish_env_file
+        echo "Sourced .local.fish from $current_dir"
     end
 end

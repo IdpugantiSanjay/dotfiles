@@ -21,7 +21,8 @@ alias pi="ssh pi"
 alias claude="s -p claude"
 alias open="xdg-open &> /dev/null"
 alias vcat="command cat"
-
-
+alias duckai="xdg-open https://duck.ai"
+alias gemini="xdg-open https://gemini.google.com"
 alias ...='cd ../..'
 alias ....='cd ../../..'
+# alias ls='ls --hyperlink=auto'
