@@ -32,6 +32,7 @@ if status is-interactive
     abbr --add gemini "xdg-open https://gemini.google.com"
     abbr --add coc 'convco commit'
     abbr --add allow 'direnv allow .'
+    abbr --add rlf 'readlink -f '
     # abbr --add ls 'ls --hyperlink'
     # abbr --add lsf "ls | fzf"
     # abbr --add coc convco commit
@@ -71,7 +72,7 @@ end
 function __auto_source --on-variable PWD
     set -l current_dir (pwd)
     set -l fish_env_file "$current_dir/.local.fish"
-    
+
     if test -f $fish_env_file
         source $fish_env_file
         echo "Sourced .local.fish from $current_dir"
