@@ -11,6 +11,7 @@ alias sw="s -p wikipedia"
 alias sg="s -p github"
 alias shn="s -p hackernews"
 alias sp="s -p perplexity"
+alias sr="s -p rink"
 
 alias c="chezmoi"
 alias dexter="ssh dexter"

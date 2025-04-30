@@ -9,6 +9,16 @@ customProviders [
 		name: bing
 		url: "https://www.bing.com/search?showconv=1&sendquery=1&q=%s"
 		tags: [bing]
+	},
+	{
+		name: claude,
+		url: "https://claude.ai/new?q=%s",
+		tags: [claude]
+	},
+	{
+		name: rink,
+		url: "https://rinkcalc.app/?q=%s",
+		tags: [rink]
 	}
 ]
 
