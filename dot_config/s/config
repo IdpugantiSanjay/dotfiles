@@ -3,7 +3,7 @@ customProviders [
 	{
 		name: gpt4o
 		url: "https://chat.openai.com/?model=gpt-4o&q=%s"
-		tags: [openai]
+		tags: [ai, openai]
 	},
 	{
 		name: bing
@@ -13,12 +13,17 @@ customProviders [
 	{
 		name: claude,
 		url: "https://claude.ai/new?q=%s",
-		tags: [claude]
+		tags: [ai, claude]
 	},
 	{
 		name: rink,
 		url: "https://rinkcalc.app/?q=%s",
 		tags: [rink]
+	},
+	{
+		name: mistral,
+		url: "https://chat.mistral.ai?q=%s",
+		tags: [ai, mistral]
 	}
 ]
 
