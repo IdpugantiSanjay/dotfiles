@@ -1,4 +1,3 @@
-
 set -Ux age_public_key age10fgs4eq2pcvqvfdr9uzm3tqjnc6ppgmcfv9znek0rtu9xgpwr95smg5a0u
 set -Ux github_username IdpugantiSanjay
 
@@ -7,7 +6,6 @@ for file in /home/sanjay/.config/fish/conf.d/*
         source $file
     end
 end
-
 
 if status is-interactive
     # and not set -q TMUX
@@ -33,6 +31,10 @@ if status is-interactive
     abbr --add coc 'convco commit'
     abbr --add allow 'direnv allow .'
     abbr --add rlf 'readlink -f '
+
+    abbr --add upd 'docker compose up -d'
+    abbr --add up 'docker compose up'
+    abbr --add down 'docker compose down'
     # abbr --add ls 'ls --hyperlink'
     # abbr --add lsf "ls | fzf"
     # abbr --add coc convco commit
@@ -67,7 +69,6 @@ if not string match -q -- $PNPM_HOME $PATH
     set -gx PATH "$PNPM_HOME" $PATH
 end
 # pnpm end
-
 
 function __auto_source --on-variable PWD
     set -l current_dir (pwd)
