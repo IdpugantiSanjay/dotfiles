@@ -57,6 +57,10 @@ if status is-interactive
         bind \cl 'clear; commandline -f repaint'
     end
 
+    function fish_command_not_found
+        # do nothing
+    end
+
     # command cat ~/.pending-tasks
     # if not set -q TMUX && [ $hostname = prime ]
     #     exec tmux 2>/dev/null
