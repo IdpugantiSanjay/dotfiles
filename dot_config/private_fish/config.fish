@@ -27,7 +27,7 @@ if status is-interactive
     abbr --add src 'source ~/.config/fish/config.fish'
     abbr --add t tmux
     abbr --add g git
-    abbr --add gemini "xdg-open https://gemini.google.com"
+    # abbr --add gemini "xdg-open https://gemini.google.com"
     abbr --add coc 'convco commit'
     abbr --add allow 'direnv allow .'
     abbr --add rlf 'readlink -f '
@@ -35,6 +35,7 @@ if status is-interactive
     abbr --add upd 'docker compose up -d'
     abbr --add up 'docker compose up'
     abbr --add down 'docker compose down'
+    abbr --add svc services
     # abbr --add ls 'ls --hyperlink'
     # abbr --add lsf "ls | fzf"
     # abbr --add coc convco commit
