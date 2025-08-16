@@ -4,6 +4,6 @@ function services
         grep "Host.*sanjayidpuganti" |
         grep -o 'Host(`[^`]*`)' | # this will handle multiple hosts
         cut -d'`' -f2 |
-        fzf |
+        fzf --query="$argv[1]" |
         xargs -I {} xdg-open https://{}
 end
