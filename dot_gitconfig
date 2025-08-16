@@ -20,6 +20,9 @@
 [push]
 	autoSetupRemote = true
 
+[gpg]
+	format = ssh
+
 # [diff]
 #         tool = difftastic
 #         external = difft
@@ -53,3 +56,11 @@
     conflictstyle = zdiff3
 [credential]
 	helper = store
+	
+[user]
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPH8988PhYgrnBb4ZFwGNC+ZBp05xJtstfWzmD6Swrnq
+	name = sanjay
+	email = sanjayidpuganti@outlook.com
+	
+[commit]
+	gpgsign = true
