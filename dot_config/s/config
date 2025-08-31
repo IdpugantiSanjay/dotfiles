@@ -24,6 +24,10 @@ customProviders [
 		name: mistral,
 		url: "https://chat.mistral.ai?q=%s",
 		tags: [ai, mistral]
+	},
+	{
+	    name: flathub,
+		url: "https://flathub.org/apps/search?q=%s",
+		tags: [apps]
 	}
 ]
-
