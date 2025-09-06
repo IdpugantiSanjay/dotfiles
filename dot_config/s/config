@@ -29,5 +29,10 @@ customProviders [
 	    name: flathub,
 		url: "https://flathub.org/apps/search?q=%s",
 		tags: [apps]
+	},
+	{
+	    name: homebrew,
+	    url: "https://formulae.brew.sh/formula/%s",
+		tags: [apps]
 	}
 ]
