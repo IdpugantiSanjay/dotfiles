@@ -1,0 +1,19 @@
+[general]
+status_path = "~/.vdirsyncer/status/"
+
+[pair khal_default]
+a = "khal_default_local"
+b = "khal_default_remote"
+collections = ["default"]
+metadata = ["color"]
+
+[storage khal_default_local]
+type = "filesystem"
+path = "/home/sanjay/.local/share/khal/calendars/"
+fileext = ".ics"
+
+[storage khal_default_remote]
+type = "caldav"
+url = "https://baikal.pi.sanjayidpuganti.com/dav.php/calendars/sanjay/"
+username = "sanjay"
+password = "6i)5mk#E4gxS^W+"
