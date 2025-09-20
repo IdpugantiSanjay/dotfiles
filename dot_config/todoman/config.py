@@ -1,0 +1,5 @@
+path = "~/.local/share/khal/calendars/*"
+date_format = "%Y-%m-%d"
+time_format = "%H:%M"
+default_list = "default"
+default_due = 48

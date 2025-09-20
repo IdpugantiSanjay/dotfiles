@@ -13,3 +13,4 @@ longdatetimeformat = %Y-%m-%d %H:%M
 
 [default]
 default_calendar = default
+timedelta = 30d
