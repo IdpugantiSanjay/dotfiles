@@ -1,4 +1,10 @@
+[language-server.codebook]
+command = "codebook-lsp"
+args = ["serve"]
+
+
 [[language]]
 name = "markdown"
 formatter = { command = "prettier", args = ["--parser", "markdown", "--prose-wrap", "always", "--print-width", "70"] }
 auto-format = true
+language-servers = ["marksman", "markdown-oxide", "codebook"]
