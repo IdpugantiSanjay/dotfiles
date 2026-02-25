@@ -62,6 +62,8 @@ if status is-interactive
         # do nothing
     end
 
+    bind \ck fzf_kill_process
+
     # atuin init fish | source
     # command cat ~/.pending-tasks
     # if not set -q TMUX && [ $hostname = prime ]
