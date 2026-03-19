@@ -1,6 +1,9 @@
 # Get editor completions based on the config schema
 "$schema" = 'https://starship.rs/config-schema.json'
 
+# format = "$custom.healthchecks $all"
+# format = "[$path]($style)[$read_only]($read_only_style) "
+
 # Inserts a blank line between shell prompts
 add_newline = false
 
@@ -26,5 +29,45 @@ format = "via [🤖 $version](bold green) "
 [dotnet]
 disabled = false
 
-[direnv]
-disabled = false
+# [direnv]
+# disabled = false
+# [username]
+# show_always = true
+
+[aws]
+disabled = true
+
+[battery]
+disabled = true
+
+[conda]
+disabled = true
+
+[gcloud]
+disabled = true
+
+[azure]
+disabled = true
+
+[buf]
+disabled = true
+
+[c]
+disabled = true
+
+[cpp]
+disabled = true
+
+
+[custom.healthchecks]
+# command = "cat ~/.local/share/starship/healthchecks.module/status"
+# command = "cat $HOME/.local/share/starship/healthchecks.module/status"
+command = "cat /home/sanjay/.local/share/starship/healthchecks.module/status"
+shell = ["bash", "--noprofile", "--norc"]
+# shell = ["sh", "-c", "--"]
+# shell = ["sh", "-c"]
+# command = "cat"
+# args = ["~/.local/share/starship/healthchecks.module/status"]
+format = "[$output]($style) "
+style = "bold red"
+when = "test -s /home/sanjay/.local/share/starship/healthchecks.module/status"
