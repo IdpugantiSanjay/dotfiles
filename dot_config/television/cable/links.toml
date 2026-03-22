@@ -1,0 +1,20 @@
+
+[metadata]
+name = "links"
+description = "Select a golink to open"
+requirements = ["GoLinks.Cli"]
+
+[source]
+command = ["GoLinks.Cli list --format json | jq '.[].name' -r | sort"]
+
+[preview]
+command = "GoLinks.Cli resolve {}"
+
+[keybindings]
+enter = "actions:open-link"
+
+
+[actions.open-link]
+description = "Open link associated with the golink key"
+command = "xdg-open (GoLinks.Cli resolve {})"
+mode = "execute"
