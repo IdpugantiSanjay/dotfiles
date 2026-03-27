@@ -16,5 +16,11 @@ enter = "actions:open-link"
 
 [actions.open-link]
 description = "Open link associated with the golink key"
-command = "xdg-open (GoLinks.Cli resolve {})"
+# command = "xdg-open (GoLinks.Cli resolve {})"
+# command = "echo $SHELL"
+command = """
+for url in (GoLinks.Cli resolve {})
+    xdg-open $url
+end
+"""
 mode = "execute"
