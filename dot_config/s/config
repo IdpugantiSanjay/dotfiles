@@ -1,8 +1,8 @@
 provider: google
 customProviders [
 	{
-		name: gpt4o
-		url: "https://chat.openai.com/?model=gpt-4o&q=%s"
+		name: gpt
+		url: "https://chat.openai.com/?model=gpt-5&q=%s"
 		tags: [ai, openai]
 	},
 	{
@@ -33,6 +33,11 @@ customProviders [
 	{
 	    name: homebrew,
 	    url: "https://formulae.brew.sh/formula/%s",
+		tags: [apps]
+	},
+	{
+		name: vscode,
+		url: "https://marketplace.visualstudio.com/search?term=%s&target=VSCode",
 		tags: [apps]
 	}
 ]
