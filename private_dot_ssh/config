@@ -1,4 +1,35 @@
-Host dexter
+Host 192.168.29.157
   HostName 192.168.29.157
   User sanjay
+
+Host dexter
+  HostName 192.168.29.252
+  User sanjay
   IdentityFile ~/.ssh/id_rsa
+  IdentitiesOnly yes
+  
+Host pi
+  HostName 192.168.29.149
+  User sanjay
+  IdentityFile ~/.ssh/vaultwarden_ed25519
+  IdentitiesOnly yes
+
+Host pi-zero2w
+  HostName 192.168.29.10
+  User sanjay
+  IdentityFile ~/.ssh/vaultwarden_ed25519
+  IdentitiesOnly yes
+
+Host bumblebee
+    HostName 192.168.29.182
+    IdentityFile ~/.ssh/vaultwarden_ed25519
+    IdentitiesOnly yes
+    # IdentityFile ~/.ssh/id_rsa
+    User sanjay
+
+
+Host windows
+    HostName 192.168.29.231
+    User 'Sanjay Idpuganti'
+    PreferredAuthentications password
+    PubkeyAuthentication no
