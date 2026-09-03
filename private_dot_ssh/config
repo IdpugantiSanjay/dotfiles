@@ -1,32 +1,36 @@
-Host 192.168.29.157
-  HostName 192.168.29.157
-  User sanjay
+# Host 192.168.29.157
+#   HostName 192.168.29.157
+#   User sanjay
 
-Host dexter
-  HostName 192.168.29.252
-  User sanjay
-  IdentityFile ~/.ssh/id_rsa
-  IdentitiesOnly yes
+# Host dexter
+#   HostName 192.168.29.252
+#   User sanjay
+#   IdentityFile ~/.ssh/id_rsa
+#   IdentitiesOnly yes
   
 Host pi
-  HostName 192.168.29.149
+  HostName raspberrypi.local
   User sanjay
   IdentityFile ~/.ssh/vaultwarden_ed25519
   IdentitiesOnly yes
 
 Host pi-zero2w
-  HostName 192.168.29.10
-  User sanjay
-  IdentityFile ~/.ssh/vaultwarden_ed25519
-  IdentitiesOnly yes
-
-Host bumblebee
-    HostName 192.168.29.182
+    HostName pi-zero2w.local
+    User sanjay
     IdentityFile ~/.ssh/vaultwarden_ed25519
     IdentitiesOnly yes
-    # IdentityFile ~/.ssh/id_rsa
+
+Host bumblebee
+    HostName bumble.local
+    IdentityFile ~/.ssh/vaultwarden_ed25519
+    IdentitiesOnly yes
     User sanjay
 
+Host cliff
+    HostName cliff.local
+    User sanjay
+    IdentityFile ~/.ssh/id_rsa
+    IdentitiesOnly yes
 
 Host windows
     HostName 192.168.29.231
