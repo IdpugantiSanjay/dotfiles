@@ -39,5 +39,15 @@ customProviders [
 		name: vscode,
 		url: "https://marketplace.visualstudio.com/search?term=%s&target=VSCode",
 		tags: [apps]
+	},
+	{
+		name: cliff,
+		url: "https://suggest.cliff.sanjayidpuganti.com/api/suggestions/search?q=%s",
+		tags: [homelab]
+	},
+	{
+		name: hister,
+		url: "https://hister.cliff.sanjayidpuganti.com/?q=%s",
+		tags: [homelab]
 	}
 ]
