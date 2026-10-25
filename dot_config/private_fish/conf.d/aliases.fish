@@ -3,30 +3,23 @@
 alias lg="lazygit"
 alias ..="cd .."
 alias ...="cd ../.."
+alias ....='cd ../../..'
 alias ccd="chezmoi cd"
 alias cp="cp -i"
 
-alias sy="s --provider youtube"
-alias sw="s --provider wikipedia"
+alias yt="s --provider youtube"
+alias shister="s --provider hister"
+alias cliff="s --provider cliff"
+alias flathub="s --provider flathub"
+alias wiki="s --provider wikipedia"
 alias sg="s --provider github"
-alias shn="s --provider hackernews"
-alias sp="s --provider perplexity"
+alias hn="s --provider hackernews"
+# alias sp="s --provider perplexity"
 alias sr="s --provider rink"
 alias sb="s --provider homebrew"
 
-alias c="chezmoi"
 alias dexter="ssh dexter"
-alias p="pueue"
-alias b="bartib"
-alias j="just"
-alias gpt="s -p gpt"
-alias bing "s -p bing"
 alias pi="ssh pi"
 # alias claude="s -p claude"
 alias open="xdg-open &> /dev/null"
-alias vcat="command cat"
-alias duckai="xdg-open https://duck.ai"
-# alias gemini="xdg-open https://gemini.google.com"
-alias ...='cd ../..'
-alias ....='cd ../../..'
 # alias ls='ls --hyperlink=auto'
